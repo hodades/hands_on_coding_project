@@ -1,0 +1,118 @@
+#27_09_23 If & functions :
+
+# Activité 1:
+# On va écrire une fonction appelée is_even() qui prend un nombre en entrée et retourne 
+# True si le nombre est pair, et False sinon.
+
+def is_even(number) :
+  if number % 2 == 0 :
+      return True 
+  else :
+      return False
+
+#Activité 2:
+
+# 1. On va créer une liste areas, qui contient la superficie du couloir (hall), 
+# de la cuisine (kit), du salon (liv), de la chambre (bed) et de la salle de bain (bath), 
+# dans cet ordre. on utilise les variables prédéfinies :
+hall = 11.25
+kit = 18.0
+liv = 20.0
+bed = 10.75
+bath = 9.50
+
+# 1 et 2 On va afficher les zones avec la fonction print():
+areas = [hall, kit, liv, bed, bath]
+print(areas)
+
+# 3 et 4 Terminez le code qui crée la liste des zones. 
+# Construisez la liste de manière à ce qu'elle contienne d'abord le nom de chaque pièce 
+# sous forme de chaîne de caractères, puis sa superficie. En d'autres termes, 
+# ajoutez les chaînes "hallway", "kitchen" et "bedroom" aux emplacements appropriés.
+#Affichez areas avec la fonction print().
+
+areas = ["hallway", hall, "kitchen", kit, "living room", liv, "bedroom", bed, "bathroom", bath]
+print(areas)
+
+# 5. On va créer une variable house qui est une liste de liste constituée des pièces et des superficies:
+house = [["hallway", hall],["kitchen", kit],["living room", liv],["bedroom", bed],["bathroom",bath]]
+
+#6. Affichez le deuxième élément de areas:
+print(areas[1])
+
+#7. Affichez le dernier élément de areas :
+print(areas[9])
+#ou
+print(areas[-1])
+
+#8. Affichez avec des nombres négatifs les 4 derniers éléments de areas
+print(areas[-4:])
+
+#9. Affichez la superficie du salon :
+print(areas[5])
+
+#10. Créez une nouvelle variable, eat_sleep_area, qui contient la somme de 
+# la superficie de la cuisine et de la superficie de la chambre. imprimez la variable
+
+eat_sleep_area =  house[1][1] + house[3][1] 
+print(eat_sleep_area )
+
+# 11 Créez la fonction surface_room qui montre la superficie lorsque vous écrivez 
+# le nom de la pièce.
+# Si le nom ne correspond pas à un nom de pièce existant, écrivez: 
+# "Réessayez avec un nom de pièce correct" 
+
+hall = 11.25
+kit = 18.0
+liv = 20.0
+bed = 10.75
+bath = 9.50
+surface_room("hallway")
+
+
+surface_room("living room")
+
+
+def surface_room(room_name):
+ if room_name== "hallway" :
+   res = hall
+ elif room_name = "kitchen" :
+   res = kit 
+ elif room_name = "living room" :
+   res = liv 
+ elif room_name = "bathroom" :
+   res = bath
+ elif room_name = "bedroom" :
+   res = bed
+ else :
+   res = "Réessayez avec un nom de pièce correct"
+ return res
+
+#Yasmine 
+areas_name = ["hall", "kit", "liv", "bed", "bath"]
+
+areas = [hall, kit, liv, bed, bath]
+
+def surface_room(room) : 
+  room = room.lower()  # Convertir en minuscules
+  if room == "hall" :
+        res = hall
+  elif room == "kit" :
+        res = kit 
+   elif room == "liv" :
+        res = liv 
+   elif room == "bed" :
+        res = bed 
+   elif room == "bath" :
+        res = bath
+  else :
+    res = "Réessayez avec un nom de pièce correct"
+
+  return res 
+
+hall = 11.25
+kit = 18.0
+liv = 20.0
+bed = 10.75
+bath = 9.50
+house = [["hallway", hall],["kitchen", kit],["living room", liv],
